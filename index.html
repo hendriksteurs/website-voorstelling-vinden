@@ -1,13 +1,27 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <script>
-      window.onload = function () {
-        window.open("https://site1.com", "_blank");
-        window.open("https://site2.com", "_blank");
-        window.open("https://site3.com", "_blank");
-      };
-    </script>
-    <p>Openen van je tabs...</p>
-  </body>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Startpagina</title>
+</head>
+<body>
+  <h2>Je tabs worden geopend...</h2>
+  <p>Als er niets gebeurt, klik hieronder:</p>
+  <button onclick="openTabs()">Open Tabs</button>
+
+  <script>
+    function openTabs() {
+      window.open("https://www.tijlkerckhove.com", "_blank");
+      window.open("https://www.pietkusters.com", "_blank");
+      window.open("https://www.tijlkerckhove.be", "_blank");
+    }
+
+    // Probeer automatisch te openen bij laden
+    window.onload = () => {
+      setTimeout(() => {
+        openTabs();
+      }, 500); // kleine delay voor betrouwbaarheid
+    };
+  </script>
+</body>
 </html>
